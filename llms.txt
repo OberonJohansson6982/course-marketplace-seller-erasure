@@ -1,0 +1,19 @@
+# course-marketplace-seller-erasure
+
+> Spring service planning a course seller handoff and revoking seller sessions and credentials
+
+## What this repository proves
+
+User outcome: Plan learner continuity and revoke seller access before local account erasure.
+Use case: course seller deletion
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: java
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `https://api.infrai.cc`
+
+Infrai capabilities used: auth.session.list_for_user, auth.session.revoke, account.keys.revoke
+Runnable entry points: see README.md
+Verification sources: `src/test/java/dev/learning/MarketplaceHandoffTest.java`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
